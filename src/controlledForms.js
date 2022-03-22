@@ -48,7 +48,25 @@ export default function Form() {
         } else {
             console.log(state, errors);
         }
+
+        reset();
+
     }
+
+    function reset() {
+        console.log('hi')
+        setState({
+            firstName: '',
+            lastName: '',
+            email: '',
+            gender: '',
+            courses: 'react',
+
+        })
+
+    }
+
+
 
 
     return (
@@ -129,7 +147,8 @@ export default function Form() {
                 </div>
                 <br />
                 <button type="submit"> Submit </button> &nbsp;
-                <button type="button"> Reset </button> &nbsp;
+                <button type="button"
+                    onClick={reset}> Reset </button> &nbsp;
             </form>
         </>
     )
